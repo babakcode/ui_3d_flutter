@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
+  <base href="/ui_3d_flutter/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <title>BabakCode 3D UI</title>
   <meta name="description" content="Flutter 3D beautiful ui using O3D dependency.">
 
   <!-- iOS meta tags & icons -->
@@ -29,7 +18,6 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>ui_3d_flutter</title>
   <link rel="manifest" href="manifest.json">
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js" defer></script>
 
@@ -41,15 +29,21 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <div id="loading"></div>
   <script>
     window.addEventListener('load', function(ev) {
+      var loading = document.querySelector('#loading');
+      loading.textContent = "Loading entrypoint...";
+
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
+            loading.textContent = "Initializing engine...";
           engineInitializer.initializeEngine().then(function(appRunner) {
+            loading.textContent = "Running app...";
             appRunner.runApp();
           });
         }
