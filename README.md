@@ -1,6 +1,6 @@
 # ui_3d_flutter
 
-Flutter 3D beautiful UI using O3D dependency.
+Flutter 3D beautiful UI using <a href="https://pub.dev/packages/o3d" target="_blank">O3D</a> dependency.
 
 <a href="https://babakcode.github.io/ui_3d_flutter" target="_blank">Online preview</a>
 
