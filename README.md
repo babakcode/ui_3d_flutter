@@ -6,7 +6,7 @@ Flutter 3D beautiful UI using O3D dependency.
 
 ## screenshots
 
-[3d ui in flutter](https://assets.babakcode.com/flutter/projects/ui_3d_flutter/gif.gif)
+![3d ui in flutter](https://assets.babakcode.com/flutter/projects/ui_3d_flutter/gif.gif "3D UI in Flutter")
 
 
 ## Links
